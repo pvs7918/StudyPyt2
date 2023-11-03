@@ -1,0 +1,8 @@
+{% extends 'myapp3/base.html' %}
+
+{% block title %}Пост {{ post.title }}{% endblock %}
+
+{% block content %}
+    <h1>Пост {{ post.title }}:</h1>
+    <p>Содержимое: {{ post.content }}</p>
+{% endblock %}

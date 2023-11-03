@@ -1,0 +1,28 @@
+{% extends './layout.html' %}
+
+{% block title %}
+Главная - {{ super() }}
+{% endblock %}
+
+{% block content %}
+<h1 class="ui header">Пользователи:</h1>
+
+    <table class="ui celled table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td> {{ user.name }} </td>
+                <td> {{ user.surname }} </td>
+                <td> {{ user.e_mail }} </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

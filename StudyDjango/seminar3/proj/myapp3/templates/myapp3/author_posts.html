@@ -1,0 +1,15 @@
+{% extends 'myapp3/base.html' %}
+
+{% block title %}Авторы и посты{% endblock %}
+
+{% block content %}
+    <h1>Статьи автора: {{ author.name }}:</h1>
+    {% for post in posts %}
+        {% if post.published %}
+            <a href = "{% url 'myapp3/post_view' post.id %}">{{ post.title }}</a>
+        {% else %}
+            {{ post.title }}
+        {% endif %}
+            <br>
+    {% endfor %}
+{% endblock %}

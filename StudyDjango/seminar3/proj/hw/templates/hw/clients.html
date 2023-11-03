@@ -1,0 +1,33 @@
+{% extends 'hw/base.html' %}
+
+{% block title %} Клиенты {% endblock %}
+
+{% block content %}
+    <h2>Клиенты магазина</h2>
+    <table class="ui celled table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>E-mail</th>
+                <th>Adress</th>
+                <th>Registration date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for client in clients %}
+            <tr>
+                <td><a href = "{% url 'hw/client' client.pk %}">{{ client.pk }}</a></td>
+                <td> {{ client.name }} </td>
+                <td> {{ client.phone }} </td>
+                <td> {{ client.email }} </td>
+                <td> {{ client.full_adress }} </td>
+                <td> {{ client.date_registered }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+

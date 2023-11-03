@@ -1,0 +1,15 @@
+{% extends './layout.html' %}
+
+{% block title %}
+Добро пожаловать! - {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <a href="{{ url_for('logout') }}">
+        <button class="btn btn-primary" type="submit">Logout</button>
+    </a>
+
+<h1 class="ui header">Добро пожаловать!</h1>
+<p>{{ user.name }} {{ user.surname }} - Вы являетесь зарегистрированным пользователем нашего сайта.</p>
+<p>{{ user.e_mail }}</p>
+{% endblock %}

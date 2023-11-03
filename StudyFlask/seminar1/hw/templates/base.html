@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>
+        {% block title %} Интернет-магазин SB.ru {% endblock %}
+    </title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="/">Главная</a>
+                <a href="/clothes/">Одежда</a>
+                <a href="/shoes/">Обувь</a>
+                <a href="/jackets/">Куртки</a>
+            </nav>
+            <br>
+        </header>
+        <main>
+            {% block content %}
+                Страница не заполнена
+            {% endblock %}
+        </main>
+        <footer>
+            Интернет-магазин SB.ru &copy
+        </footer>
+    </div>
+</body>
+</html>

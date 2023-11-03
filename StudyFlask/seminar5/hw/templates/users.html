@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+
+<table>
+    <tbody>
+        {% for user in users %}
+            <tr>
+                <td>
+                    {{ user.id }}
+                </td>
+                <td>
+                    {{ user.name }}
+                </td>
+                <td>
+                    {{ user.email }}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<hr>
+
+<form method="post" action="/users/">
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name">
+    <br>
+    <label for="email">e-Mail</label>
+    <input id="email" type="email" name="email">
+    <br>
+    <button type="submit">Create User</button>
+</form>
+
+<br>
+<form method="POST" action="/users/">
+    <input type="hidden" name="_method" value="put" />
+    <label for="id">id</label>
+    <input id="id2" type="text" name="id">
+    <br>
+    <label for="name">Name</label>
+    <input id="name2" type="text" name="name">
+    <br>
+    <label for="email">e-Mail</label>
+    <input id="email2" type="email" name="email">
+    <br>
+    <button type="submit">Update User</button>
+</form>
+
+</body>
+</html>

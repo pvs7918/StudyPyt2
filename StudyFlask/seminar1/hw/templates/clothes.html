@@ -1,0 +1,20 @@
+{% extends './base.html' %}
+
+{% block title %}
+Одежда
+{% endblock %}
+
+{% block content %}
+    <h2>Одежда</h2><br>
+    {% for item in data %}
+        <div class="card hover-a mb-4">
+            <div class="card-body">
+                <h4 class="card-title">{{ item.title }}</h4>
+                <p>{{ item.description }}</p>
+                <span>Размер: </span><div class="card-text small text-muted">{{ item.size }}</div>
+                <span>Цена: </span><div class="card-text small text-muted">{{ item.price }}</div>
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,36 @@
+# Рассмотрим пример JSON файла
+
+# {
+# "id": 2,
+# "name": "Ervin Howell",
+# "username": "Antonette",
+# "email": [
+# "Shanna@melissa.tv",
+# "antonette@howel.com"
+# ],
+# "address": {
+# "street": "Victor Plains",
+# "suite": "Suite 879",
+# "city": "Wisokyburgh",
+# "zipcode": "90566-7771",
+# "geo": {
+# "lat": "-43.9509",
+# "lng": "-34.4618"
+# }
+# },
+# "phone": "010-692-6593 x09125",
+# "website": "anastasia.net",
+# "company": {
+# "name": "Deckow-Crist",
+# "catchPhrase": "Proactive didactic contingency",
+# "bs": "synergize scalable supply-chains"
+# }
+# }
+
+import json
+with open('user.json', 'r', encoding='utf-8') as f:
+    json_file = json.load(f)
+print(f'{type(json_file) = }\n{json_file = }')
+print(f'{json_file["name"] = }')
+print(f'{json_file["address"]["geo"] = }')
+print(f'{json_file["email"] = }')
