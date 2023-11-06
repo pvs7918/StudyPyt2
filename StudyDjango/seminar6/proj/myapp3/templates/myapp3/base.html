@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Сайт {% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'myapp3/index' %}">Главная</a>
+        <a href="{% url 'myapp3/about' %}">О нас</a>
+    </nav>
+    {% block content %}
+        <p>Здесь будет текст...</p>
+    {% endblock %}
+</body>
+</html>
